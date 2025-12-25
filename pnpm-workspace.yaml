@@ -1,2 +1,3 @@
 overrides:
+  '@billdestein/react-better-frames': link:../react-better-frames
   '@billdesteinn/react-better-frames': link:../react-better-frames

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Canvas from '@billdestein/react-better-frames'
-import Frame from '@billdestein/react-better-frames'
-import Geometry from '@billdestein/react-better-frames'
+import { Canvas } from '@billdestein/react-better-frames'
+import { Frame } from '@billdestein/react-better-frames'
+import type { Geometry } from '@billdestein/react-better-frames'
 
 const Content = styled.div`
     align-items: center;
