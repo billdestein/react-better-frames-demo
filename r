@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# --- Clear the npm cache
-
-echo ">>>>>>>> npm cache clean --force"
-npm cache clean --force
-
 echo ">>>>>>>> npm config set registry https://registry.npmjs.org/"
 npm config set registry https://registry.npmjs.org/
 
@@ -21,6 +16,9 @@ rm package-lock.json
 
 echo ">>>>>>>> rm -rf dist"
 rm -rf dist
+
+echo ">>>>>>>> npm cache clean --force"
+npm cache clean --force
 
 echo ">>>>>>>> npm install"
 npm install
