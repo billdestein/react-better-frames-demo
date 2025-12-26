@@ -28,13 +28,10 @@ npm install
 echo ">>>>>>>> npm run build"
 npm run build
 
-echo ">>>>>>>> npm link"
-npm link
-
 # --- Build, link and start the app
 
-cd ~/git/react-better-frames-demo
 echo ">>>>>>>> cd ~/git/react-better-frames-demo"
+cd ~/git/react-better-frames-demo
 
 echo ">>>>>>>> rm -rf node_modules"
 rm -rf node_modules
@@ -48,8 +45,11 @@ rm -rf dist
 echo ">>>>>>>> npm install"
 npm install
 
-echo ">>>>>>>> npm link @billdestein/react-better-frames"
-npm link @billdestein/react-better-frames
+echo ">>>>>>>> rm -rf /Users/bill/git/react-better-frames-demo/@node_modules/billdestein/react-better-frames"
+rm -rf /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
+
+echo ">>>>>>>> ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/@billdestein/react-better-frames"
+ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
 
 echo ">>>>>>>> npm run start"
 npm run start
