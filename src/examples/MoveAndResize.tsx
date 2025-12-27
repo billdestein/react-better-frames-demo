@@ -10,15 +10,35 @@ const Container = styled.div`
     height: 100vh;
 `
 
-interface Props {
+interface ImplementationProps {
+    canvas: Canvas
 }
 
-const Implementation: React.FunctionComponent<Props> = (props) => {
-  const geometry: Geometry = {} as Geometry
-  void geometry
-  void props
-  void Frame
-  return <div>MoveAndResize</div>
+const Implementation: React.FunctionComponent<any> = (props) => {
+  const { canvas } = props as ImplementationProps
+
+  const geometry: Geometry = {
+    height: 200,
+    width: 300,
+    x: 100,
+    y: 100,
+    z: 100
+  }
+
+  return (
+    <Frame
+      buttons={[]}
+      canvas={canvas as Canvas}
+      geometry={geometry}
+      onResize={() => {}}
+      title={'Move and Resize'}
+    >
+      <p>Frame</p>
+    </Frame>
+  )
+}
+
+interface Props {
 }
 
 export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
@@ -29,8 +49,10 @@ export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
     const element = document.getElementById('container')
     const canvas = new Canvas()
     canvas.initialize(element)
-    const props = {}
-    canvas.addFrame(Implementation, props)
+    const implementationProps = {
+      canvas
+    }
+    canvas.addFrame(Implementation, implementationProps)
   }, []);
 
   return (

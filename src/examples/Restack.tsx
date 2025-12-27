@@ -15,7 +15,6 @@ const Implementation: React.FunctionComponent<Props> = (props) => {
   return <div>Restack</div>
 }
 
-
 export const Restack: React.FunctionComponent<Props> = (props) => {
   void props
 
