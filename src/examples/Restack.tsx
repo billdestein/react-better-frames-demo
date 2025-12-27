@@ -7,7 +7,7 @@ interface ImplementationProps {
   canvas: Canvas
 }
 
-const Implementation: React.FunctionComponent<any> = (props) => {
+const farFrame: React.FunctionComponent<any> = (props) => {
   const { canvas } = props as ImplementationProps
 
   const geometry: Geometry = {
@@ -26,9 +26,38 @@ const Implementation: React.FunctionComponent<any> = (props) => {
       onResize={() => {}}
       title={'Move and Resize'}
     >
-      <p>Frame</p>
+      <p>Far</p>
     </Frame>
   )
+}
+
+const nearFrame: React.FunctionComponent<any> = (props) => {
+  const { canvas } = props as ImplementationProps
+
+  const geometry: Geometry = {
+    height: 200,
+    width: 300,
+    x: 100,
+    y: 100,
+    z: 100
+  }
+
+  return (
+    <Frame
+      buttons={[]}
+      canvas={canvas as Canvas}
+      geometry={geometry}
+      onResize={() => {}}
+      title={'Move and Resize'}
+    >
+      <p>Near</p>
+    </Frame>
+  )
+}
+
+const app = (canvas: Canvas) => {
+  canvas.addFrame(farFrame, { canvas })
+  canvas.addFrame(nearFrame, { canvas })
 }
 
 interface Props {
@@ -40,7 +69,7 @@ export const Restack: React.FunctionComponent<Props> = (props) => {
   useEffect(() => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
-    canvas.addFrame(Implementation, { canvas })
+    app(canvas)
   }, []);
 
   return (
