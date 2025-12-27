@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
+import { Canvas } from '@billdestein/react-better-frames'
 
 const Container = styled.div`
+    border: 4px solid red;
     color: white;
     height: 100vh;
 `
@@ -9,36 +11,29 @@ const Container = styled.div`
 interface Props {
 }
 
-export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
+const Implementation: React.FunctionComponent<Props> = (props) => {
   void props
-  const containerRef = useRef(null);
-  const [ isContainerRendered, setIsContainerRendered ] = useState(false);
-
-  useEffect(() => {
-    if (containerRef.current) {
-      setIsContainerRendered(true);
-    }
-  }, []);
-
-  const renderContents = (): React.JSX.Element | null => {
-    if ( !isContainerRendered ) {
-      return <div>nothing</div>
-    }
-
-    return <div>contents</div>
-  }
-
-  return (
-    <Container ref={containerRef} id="container">
-      { renderContents() }
-    </Container>
-  );
+  return <div>MoveAndResize</div>
 }
 
 
+export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
+  void props
 
+  useEffect(() => {
+    console.log('useEffect')
+    const element = document.getElementById('container')
+    const canvas = new Canvas()
+    canvas.initialize(element)
+    const props = {}
+    canvas.addFrame(Implementation, props)
+  }, []);
 
-
+  return (
+    <Container id="container">
+    </Container>
+  );
+}
 
 
 
