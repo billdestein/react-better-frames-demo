@@ -39,8 +39,7 @@ export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
 
   useEffect(() => {
     const element = document.getElementById('container')
-    const canvas = new Canvas()
-    canvas.initialize(element)
+    const canvas = new Canvas(element)
     canvas.addFrame(Implementation, { canvas })
   }, []);
 
