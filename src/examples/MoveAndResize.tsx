@@ -16,7 +16,6 @@ const Implementation: React.FunctionComponent<Props> = (props) => {
   return <div>MoveAndResize</div>
 }
 
-
 export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
   void props
 
@@ -36,6 +35,15 @@ export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
 }
 
 
+export const MoveAndResizeMarkdown: string = `
+# Move and resize  
+
+All frames can be moved and resized.  
+
+To move a frame, simply grab the frame header and move your mouse.  
+
+To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.
+`
 
 
 // import React, { useEffect, useState } from 'react';

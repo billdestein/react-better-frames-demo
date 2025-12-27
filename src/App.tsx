@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Example } from './types'
 import { Left } from './Left'
-// import { Right } from './Right'
-import {MoveAndResize} from "./examples/MoveAndResize";
+import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
+import ReactMarkdown from 'react-markdown'
 
 const Container = styled.div`
       display: flex;
@@ -32,11 +31,18 @@ const RightDiv = styled.div`
 `
 
 function App() {
-  const [ example, setExample ] = useState<Example | null>(null)
+  const [ exampleName, setExampleName ] = useState<string>('null')
 
-  const exampleSelected = (example: Example) => {
-    setExample(example)
-    console.log('exampleSelected')
+  const exampleSelected = (exampleName: string) => {
+    setExampleName(exampleName)
+  }
+
+  let example: React.JSX.Element = <div></div>
+  let markdown: string = ''
+
+  if (exampleName === 'Move and resize') {
+    example = <MoveAndResize/>
+    markdown = MoveAndResizeMarkdown
   }
 
   return (
@@ -45,10 +51,10 @@ function App() {
         <Left exampleSelected={exampleSelected}/>
       </LeftDiv>
       <MiddleDiv>
-        { example === null ? <div/> : example.markdown }
+        <ReactMarkdown>{ markdown }</ReactMarkdown>
       </MiddleDiv>
       <RightDiv>
-        <MoveAndResize/>
+        { example }
       </RightDiv>
     </Container>
   )
