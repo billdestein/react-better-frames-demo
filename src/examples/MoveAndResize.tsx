@@ -1,14 +1,7 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame } from '@billdestein/react-better-frames'
 import { type Geometry } from '@billdestein/react-better-frames'
-
-const Container = styled.div`
-    border: 4px solid red;
-    color: white;
-    height: 100vh;
-`
 
 interface ImplementationProps {
     canvas: Canvas
@@ -52,8 +45,8 @@ export const MoveAndResize: React.FunctionComponent<Props> = (props) => {
   }, []);
 
   return (
-    <Container id="container">
-    </Container>
+    <div style={{ height: '100vh' }} id="container">
+    </div>
   );
 }
 
