@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Example } from './types'
 import { Left } from './Left'
-import { Right } from './Right'
+// import { Right } from './Right'
+import {MoveAndResize} from "./examples/MoveAndResize";
 
 const Container = styled.div`
       display: flex;
@@ -47,7 +48,7 @@ function App() {
         { example === null ? <div/> : example.markdown }
       </MiddleDiv>
       <RightDiv>
-        <Right example={example}/>
+        <MoveAndResize/>
       </RightDiv>
     </Container>
   )
