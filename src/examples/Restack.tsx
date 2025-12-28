@@ -1,14 +1,9 @@
 import React, { useEffect } from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
-import { Frame, Geometry } from '@billdestein/react-better-frames'
+import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
-interface ImplementationProps {
-  canvas: Canvas
-  geometry: Geometry
-}
-
-const far: React.FunctionComponent<any> = (props) => {
-  const { canvas, geometry } = props as ImplementationProps
+const far: React.FunctionComponent<FrameProps> = (frameProps) => {
+  const { canvas, geometry } = frameProps
 
   return (
     <Frame

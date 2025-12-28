@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
-import { Frame, Geometry } from '@billdestein/react-better-frames'
+import { Frame, FrameProps } from '@billdestein/react-better-frames'
 import waterfall from './images/waterfall.jpg'
 
 const ImgStyle= {
@@ -9,13 +9,8 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-interface ImplementationProps {
-  canvas: Canvas
-  geometry: Geometry
-}
-
-const waterfallFrame: React.FunctionComponent<any> = (props) => {
-  const { canvas, geometry } = props as ImplementationProps
+const waterfallFrame: React.FunctionComponent<FrameProps> = (frameProps) => {
+  const { canvas, geometry } = frameProps
 
   return (
     <Frame
