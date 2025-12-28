@@ -4,14 +4,10 @@ import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, Geometry } from '@billdestein/react-better-frames'
 import waterfall from './images/waterfall.jpg'
 
-// const StyledImage = styled.img`
-//   width: 100px;
-//   height: auto; /* Maintain aspect ratio */
-//   border-radius: 50%; /* Example style */
-//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-// `;
-
 const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 interface ImplementationProps {
