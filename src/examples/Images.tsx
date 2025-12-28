@@ -25,7 +25,7 @@ const waterfallFrame: React.FunctionComponent<FrameProps> = (frameProps) => {
   )
 }
 
-const riverFrame: React.FunctionComponent<any> = (props) => {
+const riverFrame: React.FunctionComponent<FrameProps> = (props) => {
   const { canvas, geometry } = props
 
   return (
