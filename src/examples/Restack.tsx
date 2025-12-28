@@ -16,7 +16,7 @@ const farFrame: React.FunctionComponent<any> = (props) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Move and Resize'}
+      title={'Far'}
     >
       <p>Far</p>
     </Frame>
@@ -33,7 +33,7 @@ const nearFrame: React.FunctionComponent<any> = (props) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Move and Resize'}
+      title={'Near'}
     >
       <p>Near</p>
     </Frame>
