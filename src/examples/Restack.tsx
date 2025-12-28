@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
-import { Frame } from '@billdestein/react-better-frames'
+import { Frame, Geometry } from '@billdestein/react-better-frames'
 
 interface ImplementationProps {
   canvas: Canvas
+  geometry: Geometry
 }
 
 const farFrame: React.FunctionComponent<any> = (props) => {
-  const { canvas } = props as ImplementationProps
-  const { geometry } = props
+  const { canvas, geometry } = props as ImplementationProps
 
   return (
     <Frame
@@ -24,8 +24,7 @@ const farFrame: React.FunctionComponent<any> = (props) => {
 }
 
 const nearFrame: React.FunctionComponent<any> = (props) => {
-  const { canvas } = props as ImplementationProps
-  const { geometry } = props
+  const { canvas, geometry } = props
 
   return (
     <Frame
@@ -45,12 +44,7 @@ const app = (canvas: Canvas) => {
   canvas.addFrame(nearFrame, { canvas })
 }
 
-interface Props {
-}
-
-export const Restack: React.FunctionComponent<Props> = (props) => {
-  void props
-
+export const Restack: React.FC = () => {
   useEffect(() => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
