@@ -47,8 +47,8 @@ const riverFrame: React.FunctionComponent<any> = (props) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(waterfallFrame, {}, {})
-  canvas.addComponent(riverFrame, {}, {})
+  canvas.addComponent(waterfallFrame, {})
+  canvas.addComponent(riverFrame, {} )
 }
 
 export const Images: React.FC = () => {

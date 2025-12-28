@@ -40,8 +40,8 @@ const near: React.FunctionComponent<any> = (props) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(far, {}, {})
-  canvas.addComponent(near, {}, {})
+  canvas.addComponent(far, {})
+  canvas.addComponent(near, {})
 }
 
 export const Restack: React.FC = () => {

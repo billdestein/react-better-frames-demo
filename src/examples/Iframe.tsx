@@ -21,7 +21,7 @@ export const Iframe: React.FunctionComponent<Props> = (props) => {
   useEffect(() => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
-    canvas.addComponent(Implementation, {}, {})
+    canvas.addComponent(Implementation, {})
   }, []);
 
   return (

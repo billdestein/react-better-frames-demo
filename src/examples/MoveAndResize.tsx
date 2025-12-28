@@ -24,7 +24,7 @@ const Component: React.FunctionComponent<any> = (props) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(Component, {}, {})
+  canvas.addComponent(Component, {})
 }
 
 export const MoveAndResize: React.FC = () => {
