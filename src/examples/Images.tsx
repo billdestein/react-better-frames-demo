@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, Geometry } from '@billdestein/react-better-frames'
 import waterfall from './images/waterfall.jpg'
 
-const StyledImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`;
+const ImgStyle= {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+}
 
 interface ImplementationProps {
   canvas: Canvas
@@ -26,7 +25,7 @@ const waterfallFrame: React.FunctionComponent<any> = (props) => {
       onResize={() => {}}
       title={'Far'}
     >
-      <StyledImage src={waterfall} alt={"waterfall"}/>
+      <img style={ImgStyle as any} src={waterfall} alt={"waterfall"}/>
     </Frame>
   )
 }
@@ -42,14 +41,14 @@ const riverFrame: React.FunctionComponent<any> = (props) => {
       onResize={() => {}}
       title={'Near'}
     >
-      <StyledImage src={waterfall} alt={"waterfall"}/>
+      <img style={ImgStyle as any} src={waterfall} alt={"waterfall"}/>
     </Frame>
   )
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addFrame(waterfallFrame, { canvas })
-  canvas.addFrame(riverFrame, { canvas })
+  canvas.addComponent(waterfallFrame, {}, {})
+  canvas.addComponent(riverFrame, {}, {})
 }
 
 export const Images: React.FC = () => {

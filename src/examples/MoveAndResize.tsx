@@ -7,7 +7,7 @@ interface AppFrameProps {
   geometry: Geometry
 }
 
-const appFrame: React.FunctionComponent<any> = (props) => {
+const Component: React.FunctionComponent<any> = (props) => {
   const { canvas, geometry } = props as AppFrameProps
 
   return (
@@ -24,7 +24,7 @@ const appFrame: React.FunctionComponent<any> = (props) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addFrame(appFrame, { canvas })
+  canvas.addComponent(Component, {}, {})
 }
 
 export const MoveAndResize: React.FC = () => {

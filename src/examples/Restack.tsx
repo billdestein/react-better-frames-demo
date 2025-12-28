@@ -7,7 +7,7 @@ interface ImplementationProps {
   geometry: Geometry
 }
 
-const farFrame: React.FunctionComponent<any> = (props) => {
+const far: React.FunctionComponent<any> = (props) => {
   const { canvas, geometry } = props as ImplementationProps
 
   return (
@@ -23,7 +23,7 @@ const farFrame: React.FunctionComponent<any> = (props) => {
   )
 }
 
-const nearFrame: React.FunctionComponent<any> = (props) => {
+const near: React.FunctionComponent<any> = (props) => {
   const { canvas, geometry } = props
 
   return (
@@ -40,8 +40,8 @@ const nearFrame: React.FunctionComponent<any> = (props) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addFrame(farFrame, { canvas })
-  canvas.addFrame(nearFrame, { canvas })
+  canvas.addComponent(far, {}, {})
+  canvas.addComponent(near, {}, {})
 }
 
 export const Restack: React.FC = () => {
