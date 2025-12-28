@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame } from '@billdestein/react-better-frames'
-import { type Geometry } from '@billdestein/react-better-frames'
 
 interface ImplementationProps {
   canvas: Canvas
@@ -9,14 +8,7 @@ interface ImplementationProps {
 
 const farFrame: React.FunctionComponent<any> = (props) => {
   const { canvas } = props as ImplementationProps
-
-  const geometry: Geometry = {
-    height: 200,
-    width: 300,
-    x: 100,
-    y: 100,
-    z: 100
-  }
+  const { geometry } = props
 
   return (
     <Frame
@@ -33,14 +25,7 @@ const farFrame: React.FunctionComponent<any> = (props) => {
 
 const nearFrame: React.FunctionComponent<any> = (props) => {
   const { canvas } = props as ImplementationProps
-
-  const geometry: Geometry = {
-    height: 200,
-    width: 300,
-    x: 100,
-    y: 100,
-    z: 100
-  }
+  const { geometry } = props
 
   return (
     <Frame
