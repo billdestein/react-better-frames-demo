@@ -43,11 +43,11 @@ rm -rf dist
 echo ">>>>>>>> npm install"
 npm install
 
-echo ">>>>>>>> rm -rf /Users/bill/git/react-better-frames-demo/@node_modules/billdestein/react-better-frames"
-rm -rf /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
+# echo ">>>>>>>> rm -rf /Users/bill/git/react-better-frames-demo/@node_modules/billdestein/react-better-frames"
+# rm -rf /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
 
-echo ">>>>>>>> ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/@billdestein/react-better-frames"
-ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
+# echo ">>>>>>>> ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/@billdestein/react-better-frames"
+# ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
 
 echo ">>>>>>>> npm run start"
 npm run start

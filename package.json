@@ -4,7 +4,7 @@
   "private": false,
   "homepage": "https://billdestein.github.io/react-better-frames-demo",
   "dependencies": {
-    "@billdestein/react-better-frames": "^0.0.9",
+    "@billdestein/react-better-frames": "^0.0.11",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
@@ -13,7 +13,6 @@
     "@types/node": "^16.18.126",
     "react-markdown": "^10.1.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.1.19",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -44,7 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-dom": "^19.2.3",
+    "@types/react-dom": "^18.0.0",
     "gh-pages": "^6.3.0"
   }
 }

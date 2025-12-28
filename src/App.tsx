@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Left } from './Left'
+import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
 import ReactMarkdown from 'react-markdown'
@@ -49,6 +50,11 @@ function App() {
   if (exampleName === 'Restack') {
     example = <Restack/>
     markdown = RestackMarkdown
+  }
+
+  if (exampleName === 'Images') {
+    example = <Images/>
+    markdown = ImagesMarkdown
   }
 
   return (

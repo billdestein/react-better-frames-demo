@@ -22,6 +22,7 @@ const Option = styled.div`
 const exampleNames = [
   'Move and resize',
   'Restack',
+  'Images',
   'Iframe'
 ]
 
