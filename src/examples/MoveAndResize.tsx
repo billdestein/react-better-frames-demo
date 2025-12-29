@@ -1,6 +1,11 @@
 import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
+import styled from 'styled-components'
+
+const StyledDiv = styled.div`
+  border: 4px solid red;
+`
 
 const Component = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
@@ -13,7 +18,7 @@ const Component = (frameProps: FrameProps) => {
       onResize={() => {}}
       title={'Move and resize'}
     >
-      <p>Move and resize</p>
+      <StyledDiv>Move and resize</StyledDiv>
     </Frame>
   )
 }

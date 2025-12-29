@@ -8,20 +8,20 @@ npm config set registry https://registry.npmjs.org/
 echo ">>>>>>>> cd ~/git/react-better-frames"
 cd ~/git/react-better-frames
 
-#echo ">>>>>>>> rm -rf node_modules"
-#rm -rf node_modules
-#
-#echo ">>>>>>>> rm package-lock.json"
-#rm package-lock.json
-#
-#echo ">>>>>>>> rm -rf dist"
-#rm -rf dist
-#
-#echo ">>>>>>>> npm cache clean --force"
-#npm cache clean --force
-#
-#echo ">>>>>>>> npm install"
-#npm install
+echo ">>>>>>>> rm -rf node_modules"
+rm -rf node_modules
+
+echo ">>>>>>>> rm package-lock.json"
+rm package-lock.json
+
+echo ">>>>>>>> rm -rf dist"
+rm -rf dist
+
+echo ">>>>>>>> npm cache clean --force"
+npm cache clean --force
+
+echo ">>>>>>>> npm install"
+npm install
 
 echo ">>>>>>>> npm run build"
 npm run build
