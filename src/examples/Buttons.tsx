@@ -1,32 +1,32 @@
 import React, { useEffect } from 'react'
-import ButtonIcons from './ButtonIcons'
+// import ButtonIcons from './ButtonIcons'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
-export type Button = {
-  icon: React.JSX.Element
-  onClick: () => void
-  tip: string
-}
+// export type Button = {
+//   icon: React.JSX.Element
+//   onClick: () => void
+//   tip: string
+// }
 
 const Component: React.FunctionComponent<FrameProps> = (frameProps) => {
   const { canvas, geometry } = frameProps
 
-  const buttonClicked = () => {
-    alert('button clicked')
-  }
+  // const buttonClicked = () => {
+  //   alert('button clicked')
+  // }
 
-  const buttons: Button[] = [
-    {
-      icon: ButtonIcons.x,
-      onClick: buttonClicked,
-      tip: 'Cancel'
-    }
-  ]
+  // const buttons: Button[] = [
+  //   {
+  //     icon: ButtonIcons.x,
+  //     onClick: buttonClicked,
+  //     tip: 'Cancel'
+  //   }
+  // ]
 
   return (
     <Frame
-      buttons={buttons}
+      buttons={[]}
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
