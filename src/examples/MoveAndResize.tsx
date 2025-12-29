@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
+// import styled from 'styled-components'
 
-const Component: React.FunctionComponent<FrameProps> = (frameProps) => {
+const Component: React.FC<FrameProps> = (frameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -13,7 +14,7 @@ const Component: React.FunctionComponent<FrameProps> = (frameProps) => {
       onResize={() => {}}
       title={'Move and resize'}
     >
-      <p>Move and resize</p>
+      <div>Move and resize</div>
     </Frame>
   )
 }
@@ -39,11 +40,8 @@ export const MoveAndResizeMarkdown: React.FC = () => {
   return (
     <div>
       <h2>Move and resize</h2>
-      <br/>
       <p>All frames can be moved and resized</p>
-      <br/>
       <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <br/>
       <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
     </div>
   )
