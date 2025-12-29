@@ -10,7 +10,7 @@ interface Props {
   example: Example | null
 }
 
-export const Right: React.FunctionComponent<Props> = (props) => {
+export const Right = (props: Props) => {
   const {example} = props
   const containerRef = useRef(null);
   const [ isContainerRendered, setIsContainerRendered ] = useState(false);

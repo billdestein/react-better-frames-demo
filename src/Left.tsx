@@ -31,7 +31,7 @@ interface Props {
   exampleSelected: (exampleName: string) => void
 }
 
-export const Left: React.FunctionComponent<Props> = (props) => {
+export const Left = (props: Props) => {
   const { exampleSelected } = props
 
   const renderOption = (exampleName: string) => {
