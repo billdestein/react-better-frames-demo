@@ -35,7 +35,7 @@ export const Buttons = () => {
   );
 }
 
-export const ButtonsMarkdown: React.FC = () => {
+export const ButtonsMarkdown = () => {
   return (
     <div>
       <h2>Move and resize</h2>

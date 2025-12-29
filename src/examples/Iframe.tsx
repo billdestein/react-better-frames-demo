@@ -24,7 +24,7 @@ export const Iframe: React.FunctionComponent<Props> = (props) => {
   );
 }
 
-export const IframeMarkdown= () => {
+export const IframeMarkdown = () => {
   return (
     <div>
       <h2>Move and resize</h2>
