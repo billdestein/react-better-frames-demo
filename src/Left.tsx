@@ -23,7 +23,8 @@ const exampleNames = [
   'Move and resize',
   'Restack',
   'Images',
-  'Iframe'
+  'Iframe',
+  'Buttons',
 ]
 
 interface Props {

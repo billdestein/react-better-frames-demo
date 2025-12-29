@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Left } from './Left'
+import { Buttons, ButtonsMarkdown } from "./examples/Buttons"
 import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
@@ -42,6 +43,16 @@ function App() {
   let example: React.JSX.Element = <div></div>
   let markdown: string = ''
 
+  if (exampleName === 'Buttons') {
+    example = <Buttons/>
+    markdown = ButtonsMarkdown
+  }
+
+  if (exampleName === 'Images') {
+    example = <Images/>
+    markdown = ImagesMarkdown
+  }
+
   if (exampleName === 'Move and resize') {
     example = <MoveAndResize/>
     markdown = MoveAndResizeMarkdown
@@ -50,11 +61,6 @@ function App() {
   if (exampleName === 'Restack') {
     example = <Restack/>
     markdown = RestackMarkdown
-  }
-
-  if (exampleName === 'Images') {
-    example = <Images/>
-    markdown = ImagesMarkdown
   }
 
   return (
