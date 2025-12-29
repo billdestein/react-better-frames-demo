@@ -9,7 +9,7 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-const waterfallFrame: React.FunctionComponent<FrameProps> = (frameProps) => {
+const waterfallFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -25,8 +25,8 @@ const waterfallFrame: React.FunctionComponent<FrameProps> = (frameProps) => {
   )
 }
 
-const riverFrame: React.FunctionComponent<FrameProps> = (props) => {
-  const { canvas, geometry } = props
+const riverFrame= (frameProps: FrameProps) => {
+  const { canvas, geometry } = frameProps
 
   return (
     <Frame
@@ -46,7 +46,7 @@ const app = (canvas: Canvas) => {
   canvas.addComponent(riverFrame, {} )
 }
 
-export const Images: React.FC = () => {
+export const Images = () => {
   const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
@@ -59,7 +59,7 @@ export const Images: React.FC = () => {
   );
 }
 
-export const ImagesMarkdown: React.FC = () => {
+export const ImagesMarkdown = () => {
   return (
     <div>
       <h2>Move and resize</h2>

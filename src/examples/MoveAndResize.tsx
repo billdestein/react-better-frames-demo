@@ -1,14 +1,9 @@
 import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
-// import styled from 'styled-components'
 
-const Component: React.FC<FrameProps> = (frameProps) => {
+const Component = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
-
-  // const Wrapper = styled.div`
-  //   border: 2px solid red;
-  // `
 
   return (
     <Frame
@@ -27,7 +22,7 @@ const app = (canvas: Canvas) => {
   canvas.addComponent(Component, {})
 }
 
-export const MoveAndResize: React.FC = () => {
+export const MoveAndResize = () => {
   const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
@@ -40,7 +35,7 @@ export const MoveAndResize: React.FC = () => {
   );
 }
 
-export const MoveAndResizeMarkdown: React.FC = () => {
+export const MoveAndResizeMarkdown = () => {
   return (
     <div>
       <h2>Move and resize</h2>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
-const far: React.FunctionComponent<FrameProps> = (frameProps) => {
+const far = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -18,8 +18,8 @@ const far: React.FunctionComponent<FrameProps> = (frameProps) => {
   )
 }
 
-const near: React.FunctionComponent<any> = (props) => {
-  const { canvas, geometry } = props
+const near = (frameProps: FrameProps) => {
+  const { canvas, geometry } = frameProps
 
   return (
     <Frame
@@ -39,7 +39,7 @@ const app = (canvas: Canvas) => {
   canvas.addComponent(near, {})
 }
 
-export const Restack: React.FC = () => {
+export const Restack = () => {
   const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
@@ -52,7 +52,7 @@ export const Restack: React.FC = () => {
   );
 }
 
-export const RestackMarkdown: React.FC = () => {
+export const RestackMarkdown = () => {
   return (
     <div>
       <h2>Move and resize</h2>

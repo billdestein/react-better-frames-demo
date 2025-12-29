@@ -4,7 +4,7 @@ import { Canvas } from '@billdestein/react-better-frames'
 interface Props {
 }
 
-const Implementation: React.FunctionComponent<Props> = (props) => {
+const Implementation = (props: Props) => {
   void props
   return <div>Iframe</div>
 }
@@ -24,7 +24,7 @@ export const Iframe: React.FunctionComponent<Props> = (props) => {
   );
 }
 
-export const IframeMarkdown: React.FC = () => {
+export const IframeMarkdown= () => {
   return (
     <div>
       <h2>Move and resize</h2>

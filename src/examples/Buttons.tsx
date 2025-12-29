@@ -2,7 +2,7 @@ import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
-const Component: React.FunctionComponent<FrameProps> = (frameProps) => {
+const Component = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -22,7 +22,7 @@ const app = (canvas: Canvas) => {
   canvas.addComponent(Component, {})
 }
 
-export const Buttons: React.FC = () => {
+export const Buttons = () => {
   const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
