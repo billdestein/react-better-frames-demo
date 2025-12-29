@@ -1,10 +1,14 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 // import styled from 'styled-components'
 
 const Component: React.FC<FrameProps> = (frameProps) => {
   const { canvas, geometry } = frameProps
+
+  // const Wrapper = styled.div`
+  //   border: 2px solid red;
+  // `
 
   return (
     <Frame
@@ -14,7 +18,7 @@ const Component: React.FC<FrameProps> = (frameProps) => {
       onResize={() => {}}
       title={'Move and resize'}
     >
-      <div>Move and resize</div>
+      <p>Move and resize</p>
     </Frame>
   )
 }
@@ -24,14 +28,14 @@ const app = (canvas: Canvas) => {
 }
 
 export const MoveAndResize: React.FC = () => {
-  useEffect(() => {
+  const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
     app(canvas)
-  }, []);
+  }
 
   return (
-    <div style={{ height: '100vh' }} id="container">
+    <div ref={ready} style={{ height: '100vh' }} id="container">
     </div>
   );
 }

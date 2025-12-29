@@ -1,11 +1,5 @@
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
-
-const Container = styled.div`
-    color: white;
-    height: 100vh;
-`
 
 interface Props {
 }
@@ -18,15 +12,15 @@ const Implementation: React.FunctionComponent<Props> = (props) => {
 export const Iframe: React.FunctionComponent<Props> = (props) => {
   void props
 
-  useEffect(() => {
+  const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
     canvas.addComponent(Implementation, {})
-  }, []);
+  }
 
   return (
-    <Container id="container">
-    </Container>
+    <div ref={ready} style={{ height: '100vh' }} id="container">
+    </div>
   );
 }
 

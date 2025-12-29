@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
@@ -40,14 +40,14 @@ const app = (canvas: Canvas) => {
 }
 
 export const Restack: React.FC = () => {
-  useEffect(() => {
+  const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
     app(canvas)
-  }, []);
+  }
 
   return (
-    <div style={{ height: '100vh' }} id="container">
+    <div ref={ready} style={{ height: '100vh' }} id="container">
     </div>
   );
 }
