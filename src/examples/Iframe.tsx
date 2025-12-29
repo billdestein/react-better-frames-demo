@@ -30,29 +30,16 @@ export const Iframe: React.FunctionComponent<Props> = (props) => {
   );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-//
-// export function Iframe() {
-//
-//   return (
-//     <div>Iframe</div>
-//   )
-// }
-
-
-
-
-
-
-
+export const IframeMarkdown: React.FC = () => {
+  return (
+    <div>
+      <h2>Move and resize</h2>
+      <br/>
+      <p>All frames can be moved and resized</p>
+      <br/>
+      <p>To move a frame, simply grab the frame header and move your mouse.</p>
+      <br/>
+      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+    </div>
+  )
+}

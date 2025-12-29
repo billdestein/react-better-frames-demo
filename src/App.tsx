@@ -5,7 +5,6 @@ import { Buttons, ButtonsMarkdown } from "./examples/Buttons"
 import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
-import ReactMarkdown from 'react-markdown'
 
 const Container = styled.div`
       display: flex;
@@ -41,26 +40,26 @@ function App() {
   }
 
   let example: React.JSX.Element = <div></div>
-  let markdown: string = ''
+  let markdown: React.JSX.Element = <div></div>
 
   if (exampleName === 'Buttons') {
     example = <Buttons/>
-    markdown = ButtonsMarkdown
+    markdown = <ButtonsMarkdown/>
   }
 
   if (exampleName === 'Images') {
     example = <Images/>
-    markdown = ImagesMarkdown
+    markdown = <ImagesMarkdown/>
   }
 
   if (exampleName === 'Move and resize') {
     example = <MoveAndResize/>
-    markdown = MoveAndResizeMarkdown
+    markdown = <MoveAndResizeMarkdown/>
   }
 
   if (exampleName === 'Restack') {
     example = <Restack/>
-    markdown = RestackMarkdown
+    markdown = <RestackMarkdown/>
   }
 
   return (
@@ -69,7 +68,7 @@ function App() {
         <Left exampleSelected={exampleSelected}/>
       </LeftDiv>
       <MiddleDiv>
-        <ReactMarkdown>{ markdown }</ReactMarkdown>
+        { markdown }
       </MiddleDiv>
       <RightDiv>
         { example }

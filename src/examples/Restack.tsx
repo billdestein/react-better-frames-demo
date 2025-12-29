@@ -52,81 +52,16 @@ export const Restack: React.FC = () => {
   );
 }
 
-
-export const RestackMarkdown: string = `
-# Restack  
-
-All frames are restackable.  
-`
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import { Canvas } from '@billdestein/react-better-frames'
-// import { Frame } from '@billdestein/react-better-frames'
-// import { type Geometry } from '@billdestein/react-better-frames'
-//
-// export function Restack(): React.JSX.Element {
-//   const div = document.getElementById('container')
-//   const canvas = new Canvas()
-//   canvas.initialize(div)
-//
-//   const renderFar = (): React.JSX.Element => {
-//     const geometry: Geometry = {
-//       height: 200,
-//       width: 300,
-//       x: 100,
-//       y: 100,
-//       z: 100
-//     }
-//
-//     return (
-//       <Frame
-//         buttons={[]}
-//         canvas={canvas}
-//         geometry={geometry}
-//         onResize={() => {}}
-//         title={'Restack'}
-//       >
-//         <div>far</div>
-//       </Frame>
-//     )
-//   }
-//
-//   const renderNear = (): React.JSX.Element => {
-//     const geometry: Geometry = {
-//       height: 200,
-//       width: 300,
-//       x: 200,
-//       y: 200,
-//       z: 200
-//     }
-//
-//     return (
-//       <Frame
-//         buttons={[]}
-//         canvas={canvas}
-//         geometry={geometry}
-//         onResize={() => {}}
-//         title={'Restack'}
-//       >
-//         <div>near</div>
-//       </Frame>
-//     )
-//   }
-//
-//
-//   return (
-//     <div>
-//       { renderFar() }
-//       { renderNear() }
-//     </div>
-//   )
-// }
+export const RestackMarkdown: React.FC = () => {
+  return (
+    <div>
+      <h2>Move and resize</h2>
+      <br/>
+      <p>All frames can be moved and resized</p>
+      <br/>
+      <p>To move a frame, simply grab the frame header and move your mouse.</p>
+      <br/>
+      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+    </div>
+  )
+}
