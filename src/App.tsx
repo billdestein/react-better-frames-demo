@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Left } from './Left'
 import { Buttons, ButtonsMarkdown } from "./examples/Buttons"
+import {Iframes, IframesMarkdown} from "./examples/Iframes";
 import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
@@ -45,6 +46,11 @@ function App() {
   if (exampleName === 'Buttons') {
     example = <Buttons/>
     markdown = <ButtonsMarkdown/>
+  }
+
+  if (exampleName === 'Iframes') {
+    example = <Iframes/>
+    markdown = <IframesMarkdown/>
   }
 
   if (exampleName === 'Images') {

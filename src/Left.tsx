@@ -23,7 +23,7 @@ const exampleNames = [
   'Move and resize',
   'Restack',
   'Images',
-  'Iframe',
+  'Iframes',
   'Buttons',
 ]
 
