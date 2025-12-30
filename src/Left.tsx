@@ -11,11 +11,12 @@ const LeftNav = styled.div`
 const Option = styled.div`
     border-bottom: 1px solid white;
     color: white;
-    padding: 10px 20px 10px 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding: 5px 10px 5px 10px;
     &:hover {
         background-color: royalblue;
         cursor: pointer;
-        width: 100%;
     }
 `
 

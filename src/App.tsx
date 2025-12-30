@@ -7,17 +7,34 @@ import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
 
-const Container = styled.div`
-      display: flex;
-      flex-direction: row;
-      height: 100vh;
+const Column = styled.div`
+    background-color: midnightblue;
+    display: flex;
+    flex-direction: Column;
+    font-size: 0.2em;
+    height: 100vh;
 `
 
-const LeftDiv = styled.div`
+const Top = styled.div`
+    border-bottom: 1px solid white;
+    color: white;
+    font-style: italic;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+`
+
+const Bottom = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+`
+
+const BottomLeft = styled.div`
     height: 100%;
 `
 
-const MiddleDiv = styled.div`
+const BottomMiddle = styled.div`
     background-color: midnightblue;
     border-left: 1px solid white;
     border-right: 1px solid white;
@@ -26,12 +43,13 @@ const MiddleDiv = styled.div`
     width: 25%;
 `
 
-const RightDiv = styled.div`
+const BottomRight = styled.div`
     background-color: midnightblue;
     color: black;
     flex-grow: 1;
     height: 100%;
 `
+
 
 function App() {
   const [ exampleName, setExampleName ] = useState<string>('null')
@@ -69,17 +87,22 @@ function App() {
   }
 
   return (
-    <Container>
-      <LeftDiv>
-        <Left exampleSelected={exampleSelected}/>
-      </LeftDiv>
-      <MiddleDiv>
-        { markdown }
-      </MiddleDiv>
-      <RightDiv>
-        { example }
-      </RightDiv>
-    </Container>
+    <Column>
+      <Top>
+        <span>React Better Frames</span>
+      </Top>
+      <Bottom>
+        <BottomLeft>
+          <Left exampleSelected={exampleSelected}/>
+        </BottomLeft>
+        <BottomMiddle>
+          { markdown }
+        </BottomMiddle>
+        <BottomRight>
+          { example }
+        </BottomRight>
+      </Bottom>
+    </Column>
   )
 }
 
