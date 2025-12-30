@@ -1,6 +1,27 @@
 import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
+import styled from "styled-components";
+
+const FarFrameBody = styled.div`
+    align-items: center;
+    background-color: #004526;
+    color: white;
+    display: flex;
+    font-size: 1.1em;
+    height: 100%;
+    justify-content: center;
+`
+
+const NearFrameBody = styled.div`
+    align-items: center;
+    background-color: #000055;
+    color: white;
+    display: flex;
+    font-size: 1.1em;
+    height: 100%;
+    justify-content: center;
+`
 
 const far = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
@@ -13,7 +34,7 @@ const far = (frameProps: FrameProps) => {
       onResize={() => {}}
       title={'Far'}
     >
-      <p>Far</p>
+      <FarFrameBody>Far</FarFrameBody>
     </Frame>
   )
 }
@@ -29,7 +50,7 @@ const near = (frameProps: FrameProps) => {
       onResize={() => {}}
       title={'Near'}
     >
-      <p>Near</p>
+      <NearFrameBody>Near</NearFrameBody>
     </Frame>
   )
 }
@@ -55,13 +76,9 @@ export const Restack = () => {
 export const RestackMarkdown = () => {
   return (
     <div>
-      <h2>Move and resize</h2>
-      <br/>
-      <p>All frames can be moved and resized</p>
-      <br/>
-      <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <br/>
-      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+      <h2>Restsck</h2>
+      <p>All frames are restackable.</p>
+      <p>Clicking on a frame causes the frame to move to the top of the stack.</p>
     </div>
   )
 }

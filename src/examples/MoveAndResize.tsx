@@ -3,8 +3,14 @@ import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
 import styled from 'styled-components'
 
-const StyledDiv = styled.div`
-  border: 4px solid red;
+const FrameBody = styled.div`
+    align-items: center;
+    background-color: #004526;
+    color: white;
+    display: flex;
+    font-size: 1.1em;
+    height: 100%;
+    justify-content: center;
 `
 
 const Component = (frameProps: FrameProps) => {
@@ -18,7 +24,7 @@ const Component = (frameProps: FrameProps) => {
       onResize={() => {}}
       title={'Move and resize'}
     >
-      <StyledDiv>Move and resize</StyledDiv>
+      <FrameBody>Move and resize</FrameBody>
     </Frame>
   )
 }
@@ -45,8 +51,8 @@ export const MoveAndResizeMarkdown = () => {
     <div>
       <h2>Move and resize</h2>
       <p>All frames can be moved and resized</p>
-      <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+      <p>To move a frame, click and hold the frame header, and then move your mouse.</p>
+      <p>To resize a frame, click and hold a side of the frame or a corner of the frame.  Then move your mouse.</p>
     </div>
   )
 }
