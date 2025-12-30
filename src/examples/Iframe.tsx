@@ -1,21 +1,49 @@
 import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
+import { Frame, FrameProps } from '@billdestein/react-better-frames'
 
-interface Props {
+const GoogleFrame= (frameProps: FrameProps) => {
+  const { canvas, geometry } = frameProps
+
+  return (
+    <Frame
+      buttons={[]}
+      canvas={canvas as Canvas}
+      geometry={geometry}
+      onResize={() => {}}
+      title={'Bears'}
+    >
+      <iframe src="http://google.com" title="Google" />
+    </Frame>
+  )
 }
 
-const Implementation = (props: Props) => {
-  void props
-  return <div>Iframe</div>
+const YahooFrame= (frameProps: FrameProps) => {
+  const { canvas, geometry } = frameProps
+
+  return (
+    <Frame
+      buttons={[]}
+      canvas={canvas as Canvas}
+      geometry={geometry}
+      onResize={() => {}}
+      title={'Cades Cove'}
+    >
+      <iframe src="http://yahoo.com" title="Yahoo" />
+    </Frame>
+  )
 }
 
-export const Iframe: React.FunctionComponent<Props> = (props) => {
-  void props
+const app = (canvas: Canvas) => {
+  canvas.addComponent(GoogleFrame, {})
+  canvas.addComponent(YahooFrame, {} )
+}
 
+export const Iframes = () => {
   const ready = () => {
     const element = document.getElementById('container')
     const canvas = new Canvas(element)
-    canvas.addComponent(Implementation, {})
+    app(canvas)
   }
 
   return (
@@ -24,16 +52,11 @@ export const Iframe: React.FunctionComponent<Props> = (props) => {
   );
 }
 
-export const IframeMarkdown = () => {
+export const ImagesMarkdown = () => {
   return (
     <div>
-      <h2>Move and resize</h2>
-      <br/>
-      <p>All frames can be moved and resized</p>
-      <br/>
-      <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <br/>
-      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+      <h2>Images</h2>
+      <p>Frames can contain images.</p>
     </div>
   )
 }

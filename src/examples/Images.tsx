@@ -1,7 +1,8 @@
 import React from 'react'
 import { Canvas } from '@billdestein/react-better-frames'
 import { Frame, FrameProps } from '@billdestein/react-better-frames'
-import waterfall from './images/waterfall.jpg'
+import bears from './images/bears.jpg'
+import cove from './images/cove.jpg'
 
 const ImgStyle= {
   width: '100%',
@@ -9,7 +10,7 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-const waterfallFrame= (frameProps: FrameProps) => {
+const bearsFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -18,14 +19,14 @@ const waterfallFrame= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Far'}
+      title={'Bears'}
     >
-      <img style={ImgStyle as any} src={waterfall} alt={"waterfall"}/>
+      <img style={ImgStyle as any} src={bears} alt={"bears"}/>
     </Frame>
   )
 }
 
-const riverFrame= (frameProps: FrameProps) => {
+const coveFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -34,16 +35,16 @@ const riverFrame= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Near'}
+      title={'Cades Cove'}
     >
-      <img style={ImgStyle as any} src={waterfall} alt={"waterfall"}/>
+      <img style={ImgStyle as any} src={cove} alt={"cove"}/>
     </Frame>
   )
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(waterfallFrame, {})
-  canvas.addComponent(riverFrame, {} )
+  canvas.addComponent(bearsFrame, {})
+  canvas.addComponent(coveFrame, {} )
 }
 
 export const Images = () => {
@@ -62,13 +63,8 @@ export const Images = () => {
 export const ImagesMarkdown = () => {
   return (
     <div>
-      <h2>Move and resize</h2>
-      <br/>
-      <p>All frames can be moved and resized</p>
-      <br/>
-      <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <br/>
-      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+      <h2>Images</h2>
+      <p>Frames can contain images</p>
     </div>
   )
 }
