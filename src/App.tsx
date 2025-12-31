@@ -18,11 +18,13 @@ const Column = styled.div`
 const Top = styled.div`
     border-bottom: 1px solid white;
     color: white;
-    font-style: italic;
-    padding-bottom: 2px;
-    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     text-align: center;
 `
+
+// font-style: italic;
+
 
 const Bottom = styled.div`
     display: flex;

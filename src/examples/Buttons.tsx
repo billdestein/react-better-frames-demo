@@ -1,25 +1,55 @@
 import React from 'react'
-import { Canvas } from '@billdestein/react-better-frames'
-import { Frame, FrameProps } from '@billdestein/react-better-frames'
+import { Button } from '@billdestein/react-better-frames'
+import ButtonIcons from './ButtonIcons'
+import { Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
+import bears from './images/bears.jpg'
 
-const Component = (frameProps: FrameProps) => {
+const ImgStyle= {
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+}
+
+const imageFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
+
+  const next = () => {
+    console.log('next')
+  }
+
+  const previous = () => {
+    console.log('previous')
+  }
+
+  const buttons: Button[] = [
+    {
+      icon: ButtonIcons.x,
+      onClick: previous,
+      tip: 'Cancel'
+    },
+    {
+      icon: ButtonIcons.x,
+      onClick: next,
+      tip: 'Cancel'
+    }
+  ]
 
   return (
     <Frame
-      buttons={[]}
+      buttons={buttons}
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Move and resize'}
+      title={'Bears'}
     >
-      <p>Move and resize</p>
+      <img style={ImgStyle as any} src={bears} alt={"bears"}/>
     </Frame>
   )
 }
 
+
 const app = (canvas: Canvas) => {
-  canvas.addComponent(Component, {})
+  canvas.addComponent(imageFrame, {})
 }
 
 export const Buttons = () => {
@@ -38,13 +68,8 @@ export const Buttons = () => {
 export const ButtonsMarkdown = () => {
   return (
     <div>
-      <h2>Move and resize</h2>
-      <br/>
-      <p>All frames can be moved and resized</p>
-      <br/>
-      <p>To move a frame, simply grab the frame header and move your mouse.</p>
-      <br/>
-      <p>To resize a frame, simply grab on a corner or side of the mouse, and move your mouse.</p>
+      <h2>Buttons</h2>
+      <p>The frame header can contain a variable number of configurable buttons.  Each button has an icon, an onclick callback, and a tool tip.</p>
     </div>
   )
 }
