@@ -1,6 +1,4 @@
 import React from 'react'
-import { Button } from '@billdestein/react-better-frames'
-import ButtonIcons from './ButtonIcons'
 import { Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
 import bears from './images/bears.jpg'
 
@@ -13,30 +11,9 @@ const ImgStyle= {
 const imageFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
-  const next = () => {
-    console.log('next')
-  }
-
-  const previous = () => {
-    console.log('previous')
-  }
-
-  const buttons: Button[] = [
-    {
-      icon: ButtonIcons.x,
-      onClick: previous,
-      tip: 'Cancel'
-    },
-    {
-      icon: ButtonIcons.x,
-      onClick: next,
-      tip: 'Cancel'
-    }
-  ]
-
   return (
     <Frame
-      buttons={buttons}
+      buttons={[]}
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
@@ -53,16 +30,17 @@ const app = (canvas: Canvas) => {
 }
 
 export const Buttons = () => {
-  const ready = () => {
-    const element = document.getElementById('container')
-    const canvas = new Canvas(element)
-    app(canvas)
-  }
-
-  return (
-    <div ref={ready} style={{ height: '100vh' }} id="container">
-    </div>
-  );
+  return <div>Buttons</div>
+  // const ready = () => {
+  //   const element = document.getElementById('container')
+  //   const canvas = new Canvas(element)
+  //   app(canvas)
+  // }
+  //
+  // return (
+  //   <div ref={ready} style={{ height: '100vh' }} id="container">
+  //   </div>
+  // );
 }
 
 export const ButtonsMarkdown = () => {
