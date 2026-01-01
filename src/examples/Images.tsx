@@ -19,7 +19,7 @@ const bearsFrame= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Bears'}
+      title={'Buttons'}
     >
       <img style={ImgStyle as any} src={bears} alt={"bears"}/>
     </Frame>

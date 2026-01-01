@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ButtonIcons } from './ButtonIcons'
 import { Button, Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
 import bears from './images/bears.jpg'
+import cove from './images/cove.jpg'
+import elk from './images/elk.jpg'
+import mill from './images/mill.jpg'
+import waterfall from './images/waterfall.jpg'
 
 const ImgStyle= {
   width: '100%',
@@ -9,15 +13,43 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-const imageFrame= (frameProps: FrameProps) => {
+const images = [
+  bears,
+  cove,
+  elk,
+  mill,
+  waterfall
+]
+
+const ImageFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
+  const [ imageNumber, setImageNumber ] = useState<number>(0)
+
+  const next = () => {
+    console.log('next')
+    if (imageNumber < images.length - 1) {
+      setImageNumber(imageNumber + 1)
+    }
+  }
+
+  const previous = () => {
+    console.log('previous')
+    if (imageNumber > 0) {
+      setImageNumber(imageNumber - 1)
+    }
+  }
 
   const buttons: Button[] = [
     {
-      icon: ButtonIcons.x,
-      onClick: () => {},
-      tip: 'x',
-    }
+      icon: ButtonIcons.previous,
+      onClick: previous,
+      tip: 'Previous',
+    },
+    {
+      icon: ButtonIcons.next,
+      onClick: next,
+      tip: 'Next',
+    },
   ]
 
   return (
@@ -26,16 +58,16 @@ const imageFrame= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Bears'}
+      title={'Buttons'}
     >
-      <img style={ImgStyle as any} src={bears} alt={"bears"}/>
+      <img style={ImgStyle as any} src={images[imageNumber]} alt={""}/>
     </Frame>
   )
 }
 
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(imageFrame, {})
+  canvas.addComponent(ImageFrame, {})
 }
 
 export const Buttons = () => {

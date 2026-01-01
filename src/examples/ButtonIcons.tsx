@@ -8,58 +8,24 @@ import { BsPlay } from 'react-icons/bs';
 import { BsPlusLg } from 'react-icons/bs';
 import { BsTrash } from 'react-icons/bs';
 import { BsX } from 'react-icons/bs'
+import { FaArrowCircleLeft } from 'react-icons/fa'
+import { FaArrowCircleRight } from 'react-icons/fa'
 import { FaRegSave } from 'react-icons/fa';
 import { FaSave } from 'react-icons/fa';
 
+const size = 10
+
 export const ButtonIcons = {
-  back: <BsArrowLeftShort size={15}></BsArrowLeftShort>,
-  file: <BsFile size={15}></BsFile>,
-  folder: <BsFolder size={15}></BsFolder>,
-  gear: <BsGear size={15}></BsGear>,
-  play: <BsPlay size={15}></BsPlay>,
-  plus: <BsPlusLg size={15}></BsPlusLg>,
-  trash: <BsTrash size={15}></BsTrash>,
-  x: <BsX size={15}></BsX>,
-  save: <FaRegSave size={15}></FaRegSave>,
-  saveAs: <FaSave size={15}></FaSave>,
+  back: <BsArrowLeftShort size={size}></BsArrowLeftShort>,
+  file: <BsFile size={size}></BsFile>,
+  folder: <BsFolder size={size}></BsFolder>,
+  gear: <BsGear size={size}></BsGear>,
+  next: <FaArrowCircleRight size={size}></FaArrowCircleRight>,
+  play: <BsPlay size={size}></BsPlay>,
+  plus: <BsPlusLg size={size}></BsPlusLg>,
+  previous: <FaArrowCircleLeft size={size}></FaArrowCircleLeft>,
+  trash: <BsTrash size={size}></BsTrash>,
+  x: <BsX size={size}></BsX>,
+  save: <FaRegSave size={size}></FaRegSave>,
+  saveAs: <FaSave size={size}></FaSave>,
 }
-
-
-
-// import { BsArrowLeftShort as back } from 'react-icons/bs';
-// import { BsFile as file } from 'react-icons/bs';
-// import { BsFolder as folder } from 'react-icons/bs';
-// import { BsGear as gear } from 'react-icons/bs';
-// import { BsPlay as play } from 'react-icons/bs';
-// import { BsPlusLg as plus } from 'react-icons/bs';
-// import { BsTrash as trash } from 'react-icons/bs';
-// import { BsX as x } from 'react-icons/bs'
-// import { FaRegSave as save } from 'react-icons/fa';
-// import { FaSave as saveAs } from 'react-icons/fa';
-//
-// export { back }
-// export { file }
-// export { folder }
-// export { gear }
-// export { play }
-// export { plus }
-// export { trash }
-// export { x }
-// export { save }
-// export { saveAs }
-//
-
-// const ButtonsIcons = {
-//   back: <BsArrowLeftShort size={15}></BsArrowLeftShort>,
-//   file: <BsFile size={15}></BsFile>,
-//   folder: <BsFolder size={15}></BsFolder>,
-//   gear: <BsGear size={15}></BsGear>,
-//   play: <BsPlay size={15}></BsPlay>,
-//   plus: <BsPlusLg size={15}></BsPlusLg>,
-//   trash: <BsTrash size={15}></BsTrash>,
-//   x: <BsX size={15}></BsX>,
-//   save: <FaRegSave size={15}></FaRegSave>,
-//   saveAs: <FaSave size={15}></FaSave>,
-// }
-//
-// export default ButtonsIcons

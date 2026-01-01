@@ -1,6 +1,5 @@
 import React from 'react'
-import { Canvas } from '@billdestein/react-better-frames'
-import { Frame, FrameProps } from '@billdestein/react-better-frames'
+import { Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
 import styled from 'styled-components'
 
 const FrameBody = styled.div`
