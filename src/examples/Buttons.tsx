@@ -1,5 +1,6 @@
 import React from 'react'
-import { Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
+import { ButtonIcons } from './ButtonIcons'
+import { Button, Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
 import bears from './images/bears.jpg'
 
 const ImgStyle= {
@@ -11,9 +12,17 @@ const ImgStyle= {
 const imageFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
+  const buttons: Button[] = [
+    {
+      icon: ButtonIcons.x,
+      onClick: () => {},
+      tip: 'x',
+    }
+  ]
+
   return (
     <Frame
-      buttons={[]}
+      buttons={buttons}
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}

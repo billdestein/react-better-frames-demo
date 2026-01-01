@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { BsArrowLeftShort } from 'react-icons/bs';
 import { BsFile } from 'react-icons/bs';
 import { BsFolder } from 'react-icons/bs';
@@ -9,7 +11,7 @@ import { BsX } from 'react-icons/bs'
 import { FaRegSave } from 'react-icons/fa';
 import { FaSave } from 'react-icons/fa';
 
-const ButtonsIcons = {
+export const ButtonIcons = {
   back: <BsArrowLeftShort size={15}></BsArrowLeftShort>,
   file: <BsFile size={15}></BsFile>,
   folder: <BsFolder size={15}></BsFolder>,
@@ -21,8 +23,6 @@ const ButtonsIcons = {
   save: <FaRegSave size={15}></FaRegSave>,
   saveAs: <FaSave size={15}></FaSave>,
 }
-
-export default ButtonsIcons
 
 
 
