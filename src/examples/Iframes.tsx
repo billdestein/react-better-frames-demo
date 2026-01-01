@@ -1,23 +1,23 @@
 import React from 'react'
-import { Canvas } from '@billdestein/react-better-frames'
-import { Frame, FrameProps } from '@billdestein/react-better-frames'
+import { Canvas, Frame, FrameProps, Geometry } from '@billdestein/react-better-frames'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-`
-
-const IframeStyle= {
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-}
+const TilesIframe = styled.iframe`
+      height: 500px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: scale(0.5);
+      transform-origin: 0 0;
+      width: 400px;
+  `
 
 
-const DemoFrame= (frameProps: FrameProps) => {
+const TilesFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
+
+  geometry.height = 300
+  geometry.width = 200
 
   return (
     <Frame
@@ -26,48 +26,18 @@ const DemoFrame= (frameProps: FrameProps) => {
       geometry={geometry}
       isIframe
       onResize={() => {}}
-      title={'Bears'}
+      title={'15 Tiles'}
     >
-      <Wrapper>
-        <iframe style={IframeStyle as any} src="https://billdestein.github.io/react-better-frames-demo/" title="React Better Frames" />
-      </Wrapper>
+      {/*<IframeWrapper>*/}
+      <TilesIframe src="https://15puzzle.netlify.app/" title={"15 Tiles"}/>
+      {/*</IframeWrapper>*/}
     </Frame>
   )
 }
-
-const MapFrame= (frameProps: FrameProps) => {
-  const { canvas, geometry } = frameProps
-
-  return (
-    <Frame
-      buttons={[]}
-      canvas={canvas as Canvas}
-      geometry={geometry}
-      isIframe
-      onResize={() => {
-      }}
-      title={'Cades Cove'}
-    >
-      <Wrapper>
-        <iframe style={IframeStyle as any} src="https://www.google.com/maps/embed?pb=!4v1767082958686!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Vocm40RlE.!2m2!1d35.59425333581726!2d-83.84184266220906!3f341.3155230784544!4f3.5380127127326233!5f0.7820865974627469" title={"Cades Cove"}/>
-      </Wrapper>
-    </Frame>
-  )
-}
-
-// <iframe
-//   src="https://www.google.com/maps/embed?pb=!4v1767082958686!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Vocm40RlE.!2m2!1d35.59425333581726!2d-83.84184266220906!3f341.3155230784544!4f3.5380127127326233!5f0.7820865974627469"
-//   width="600" height="450" style="border:0;" allowFullScreen="" loading="lazy"
-//   referrerPolicy="no-referrer-when-downgrade"></iframe>
-//
-
-
-
 
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(DemoFrame, {})
-  canvas.addComponent(MapFrame, {})
+  canvas.addComponent(TilesFrame, {})
 }
 
 export const Iframes = () => {
