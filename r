@@ -48,7 +48,7 @@ echo ">>>>>>>> npm install"
 npm install
 
 #----------------------------------------------------------------------------------------------------
-# Cause the app to use the local package (not the one on NPM)
+# Force the app to use the local package (not the one on NPM)
 #----------------------------------------------------------------------------------------------------
 
 echo ">>>>>>>> rm -rf /Users/bill/git/react-better-frames-demo/node_modules/@billdestein"
@@ -61,7 +61,7 @@ echo ">>>>>>>> ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-b
 ln -s /Users/bill/git/react-better-frames /Users/bill/git/react-better-frames-demo/node_modules/@billdestein/react-better-frames
 
 #----------------------------------------------------------------------------------------------------
-# Cause the package to use the app's react and react-dom
+# Force the package to use the app's react and react-dom
 #----------------------------------------------------------------------------------------------------
 
 echo ">>>>>>>> cd ~/git/react-better-frames/node_modules"
