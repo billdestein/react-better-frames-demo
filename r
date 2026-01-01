@@ -73,11 +73,23 @@ rm -rf react
 echo ">>>>>>>> rm -rf react-dom"
 rm -rf react-dom
 
+echo ">>>>>>>> rm -rf @types/react"
+rm -rf @types/react
+
+echo ">>>>>>>> rm -rf @types/react-dom"
+rm -rf @types/react-dom
+
 echo ">>>>>>>> ln -s ~/git/react-better-frames-demo/node_modules/react react"
 ln -s ~/git/react-better-frames-demo/node_modules/react react
 
 echo ">>>>>>>> ln -s ~/git/react-better-frames-demo/node_modules/react-dom react-dom"
 ln -s ~/git/react-better-frames-demo/node_modules/react-dom react-dom
+
+echo ">>>>>>>> ln -s ~/git/react-better-frames-demo/node_modules/@types/react @types/react"
+ln -s ~/git/react-better-frames-demo/node_modules/@types/react @types/react
+
+echo ">>>>>>>> ln -s ~/git/react-better-frames-demo/node_modules/@types/react-dom @types/react-dom"
+ln -s ~/git/react-better-frames-demo/node_modules/@types/react-dom @types/react-dom
 
 #----------------------------------------------------------------------------------------------------
 # Start the dev server

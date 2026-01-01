@@ -30,17 +30,16 @@ const app = (canvas: Canvas) => {
 }
 
 export const Buttons = () => {
-  return <div>Buttons</div>
-  // const ready = () => {
-  //   const element = document.getElementById('container')
-  //   const canvas = new Canvas(element)
-  //   app(canvas)
-  // }
-  //
-  // return (
-  //   <div ref={ready} style={{ height: '100vh' }} id="container">
-  //   </div>
-  // );
+  const ready = () => {
+    const element = document.getElementById('container')
+    const canvas = new Canvas(element)
+    app(canvas)
+  }
+
+  return (
+    <div ref={ready} style={{ height: '100vh' }} id="container">
+    </div>
+  );
 }
 
 export const ButtonsMarkdown = () => {
