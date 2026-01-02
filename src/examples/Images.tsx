@@ -10,7 +10,7 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-const bearsFrame= (frameProps: FrameProps) => {
+const BearsFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -19,14 +19,14 @@ const bearsFrame= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       onResize={() => {}}
-      title={'Buttons'}
+      title={'Bears'}
     >
       <img style={ImgStyle as any} src={bears} alt={"bears"}/>
     </Frame>
   )
 }
 
-const coveFrame= (frameProps: FrameProps) => {
+const CoveFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -43,8 +43,8 @@ const coveFrame= (frameProps: FrameProps) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(bearsFrame, {})
-  canvas.addComponent(coveFrame, {} )
+  canvas.addComponent(BearsFrame, {})
+  canvas.addComponent(CoveFrame, {} )
 }
 
 export const Images = () => {

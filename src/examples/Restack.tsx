@@ -23,7 +23,7 @@ const NearFrameBody = styled.div`
     justify-content: center;
 `
 
-const far = (frameProps: FrameProps) => {
+const Far = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -39,7 +39,7 @@ const far = (frameProps: FrameProps) => {
   )
 }
 
-const near = (frameProps: FrameProps) => {
+const Near = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -56,8 +56,8 @@ const near = (frameProps: FrameProps) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(far, {})
-  canvas.addComponent(near, {})
+  canvas.addComponent(Far, {})
+  canvas.addComponent(Near, {})
 }
 
 export const Restack = () => {

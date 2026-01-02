@@ -4,7 +4,7 @@
   "private": false,
   "homepage": "https://billdestein.github.io/react-better-frames-demo",
   "dependencies": {
-    "@billdestein/react-better-frames": "^0.0.15",
+    "@billdestein/react-better-frames": "^0.0.17",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",

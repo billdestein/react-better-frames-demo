@@ -33,6 +33,7 @@ const EelFrame= (frameProps: FrameProps) => {
       buttons={[]}
       canvas={canvas as Canvas}
       geometry={geometry}
+      isFixedSize
       isIframe
       onResize={() => {}}
       title={'Eel Slap'}
@@ -53,6 +54,7 @@ const TilesFrame= (frameProps: FrameProps) => {
       buttons={[]}
       canvas={canvas as Canvas}
       geometry={geometry}
+      isFixedSize
       isIframe
       onResize={() => {}}
       title={'15 Tiles'}
@@ -65,7 +67,7 @@ const TilesFrame= (frameProps: FrameProps) => {
 
 const app = (canvas: Canvas) => {
   canvas.addComponent(TilesFrame, {})
-  canvas.addComponent(EelFrame, {})
+  canvas.addComponent(TilesFrame, {})
 }
 
 export const Iframes = () => {
