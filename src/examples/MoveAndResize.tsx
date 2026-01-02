@@ -40,8 +40,7 @@ export const MoveAndResize = () => {
   }
 
   return (
-    <div ref={ready} style={{ height: '100vh' }} id="container">
-    </div>
+    <div ref={ready} style={{ height: '100vh' }} id="container"/>
   );
 }
 

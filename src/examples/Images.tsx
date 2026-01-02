@@ -55,8 +55,7 @@ export const Images = () => {
   }
 
   return (
-    <div ref={ready} style={{ height: '100vh' }} id="container">
-    </div>
+    <div ref={ready} style={{ height: '100vh' }} id="container"/>
   );
 }
 
@@ -64,7 +63,8 @@ export const ImagesMarkdown = () => {
   return (
     <div>
       <h2>Images</h2>
-      <p>Frames can contain images</p>
+      <p>Frames can contain images.</p>
+      <p>When the frame is resized, the image is automatically resized as well.  The aspect ration of the image is preserved, and fit is achieved through clipping.</p>
     </div>
   )
 }

@@ -23,7 +23,7 @@ const images = [
 
 const ImageFrame= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
-  const [ imageNumber, setImageNumber ] = useState<number>(0)
+  const [ imageNumber, setImageNumber ] = useState<number>(3)
 
   const next = () => {
     if (imageNumber === 4) {
@@ -80,8 +80,7 @@ export const Buttons = () => {
   }
 
   return (
-    <div ref={ready} style={{ height: '100vh' }} id="container">
-    </div>
+    <div ref={ready} style={{ height: '100vh' }} id="container"/>
   );
 }
 

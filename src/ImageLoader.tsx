@@ -7,7 +7,7 @@ import mill from './examples/images/mill.jpg'
 import waterfall from './examples/images/waterfall.jpg'
 
 const HiddenDiv = styled.div`
-    height: 0px;    
+    height: 0;    
 `
 
 export const ImageLoader = () => {
