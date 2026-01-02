@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Left } from './Left'
 import { Buttons, ButtonsMarkdown } from "./examples/Buttons"
 import {Iframes, IframesMarkdown} from "./examples/Iframes";
+import {ImageLoader} from "./ImageLoader"
 import {Images, ImagesMarkdown} from "./examples/Images";
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
@@ -11,12 +12,13 @@ const Column = styled.div`
     background-color: midnightblue;
     display: flex;
     flex-direction: Column;
-    font-size: 0.2em;
+    font-size: 1.0em;
     height: 100vh;
 `
 
 const Top = styled.div`
     border-bottom: 1px solid white;
+    font-size: 2.0em;
     color: white;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -104,6 +106,7 @@ function App() {
           { example }
         </BottomRight>
       </Bottom>
+      <ImageLoader/>
     </Column>
   )
 }

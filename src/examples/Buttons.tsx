@@ -26,15 +26,17 @@ const ImageFrame= (frameProps: FrameProps) => {
   const [ imageNumber, setImageNumber ] = useState<number>(0)
 
   const next = () => {
-    console.log('next')
-    if (imageNumber < images.length - 1) {
+    if (imageNumber === 4) {
+      setImageNumber(0)
+    } else {
       setImageNumber(imageNumber + 1)
     }
   }
 
   const previous = () => {
-    console.log('previous')
-    if (imageNumber > 0) {
+    if (imageNumber === 0) {
+      setImageNumber(4)
+    } else {
       setImageNumber(imageNumber - 1)
     }
   }
