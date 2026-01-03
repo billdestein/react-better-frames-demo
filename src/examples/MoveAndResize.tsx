@@ -45,12 +45,14 @@ export const MoveAndResize = () => {
 }
 
 export const MoveAndResizeMarkdown = () => {
+  const code = 'https://github.com/billdestein/react-better-frames-demo/blob/main/src/examples/MoveAndResize.tsx'
   return (
     <div>
-      <h2>Move and resize</h2>
+      <h2 style={{marginTop: '5px'}}>Move and resize</h2>
       <p>All frames can be moved and resized</p>
       <p>To move a frame, click and hold the frame header, and then move your mouse.</p>
       <p>To resize a frame, click and hold a side of the frame or a corner of the frame.  Then move your mouse.</p>
+      <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )
 }

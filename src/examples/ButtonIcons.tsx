@@ -13,7 +13,7 @@ import { FaArrowCircleRight } from 'react-icons/fa'
 import { FaRegSave } from 'react-icons/fa';
 import { FaSave } from 'react-icons/fa';
 
-const size = 10
+const size = 18
 
 export const ButtonIcons = {
   back: <BsArrowLeftShort size={size}></BsArrowLeftShort>,

@@ -85,10 +85,12 @@ export const Buttons = () => {
 }
 
 export const ButtonsMarkdown = () => {
+  const code = 'https://github.com/billdestein/react-better-frames-demo/blob/main/src/examples/Buttons.tsx'
   return (
     <div>
-      <h2>Buttons</h2>
+      <h2 style={{marginTop: '5px'}}>Buttons</h2>
       <p>The frame header can contain a variable number of configurable buttons.  Each button has an icon, an onclick callback, and a tool tip.</p>
+      <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )
 }

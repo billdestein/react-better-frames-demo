@@ -74,11 +74,13 @@ export const Restack = () => {
 }
 
 export const RestackMarkdown = () => {
+  const code = 'https://github.com/billdestein/react-better-frames-demo/blob/main/src/examples/Restack.tsx'
   return (
     <div>
-      <h2>Restack</h2>
+      <h2 style={{marginTop: '5px'}}>Restack</h2>
       <p>All frames are restackable.</p>
       <p>Clicking on a frame causes that frame to move to the front of the stack.</p>
+      <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )
 }

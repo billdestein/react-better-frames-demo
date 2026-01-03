@@ -47,10 +47,11 @@ const Documentation = styled.div`
 `
 
 const Right = styled.div`
-    background-color: #CAF0F8;
+    background-color: #CCCCCC;
     flex-grow: 1;
 `
 
+// background-color: #CAF0F8;
 
 function App() {
   const [ exampleName, setExampleName ] = useState<string>('null')

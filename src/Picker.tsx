@@ -21,7 +21,7 @@ const Bottom = styled.div`
 const Option = styled.div`
     border-bottom: 1px solid white;
     color: white;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 15px 5px 15px;
     white-space: nowrap;
     &:hover {
         background-color: royalblue;
