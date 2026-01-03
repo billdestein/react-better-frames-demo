@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
-import { Left } from './Left'
 import { Buttons, ButtonsMarkdown } from "./examples/Buttons"
+import { init, track } from '@amplitude/analytics-browser';
 import {Iframes, IframesMarkdown} from "./examples/Iframes";
 import {ImageLoader} from "./ImageLoader"
 import {Images, ImagesMarkdown} from "./examples/Images";
+import { Left } from './Left'
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
+import styled from 'styled-components'
 
 const Column = styled.div`
     background-color: midnightblue;
@@ -17,6 +18,7 @@ const Column = styled.div`
 `
 
 const Top = styled.div`
+    background-color: #023E8A;
     border-bottom: 1px solid white;
     font-size: 2.0em;
     color: white;
@@ -24,9 +26,6 @@ const Top = styled.div`
     padding-top: 5px;
     text-align: center;
 `
-
-// font-style: italic;
-
 
 const Bottom = styled.div`
     display: flex;
@@ -39,7 +38,7 @@ const BottomLeft = styled.div`
 `
 
 const BottomMiddle = styled.div`
-    background-color: midnightblue;
+    background-color: #023E8A;
     border-left: 1px solid white;
     border-right: 1px solid white;
     color: white;
@@ -48,7 +47,7 @@ const BottomMiddle = styled.div`
 `
 
 const BottomRight = styled.div`
-    background-color: midnightblue;
+    background-color: #CAF0F8;
     color: black;
     flex-grow: 1;
     height: 100%;
@@ -57,8 +56,12 @@ const BottomRight = styled.div`
 
 function App() {
   const [ exampleName, setExampleName ] = useState<string>('null')
+  init('1df394cde28bca7882ed8ae45365a009')
+
+  track('app-opened', {})
 
   const exampleSelected = (exampleName: string) => {
+    track('example-selected', { exampleName })
     setExampleName(exampleName)
   }
 

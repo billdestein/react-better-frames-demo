@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const FarFrameBody = styled.div`
     align-items: center;
-    background-color: #004526;
+    background-color: #023E8A;
     color: white;
     display: flex;
     font-size: 1.1em;
@@ -15,7 +15,7 @@ const FarFrameBody = styled.div`
 
 const NearFrameBody = styled.div`
     align-items: center;
-    background-color: #000055;
+    background-color: #0077B6;
     color: white;
     display: flex;
     font-size: 1.1em;

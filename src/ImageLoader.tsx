@@ -6,19 +6,24 @@ import elk from './examples/images/elk.jpg'
 import mill from './examples/images/mill.jpg'
 import waterfall from './examples/images/waterfall.jpg'
 
-const HiddenDiv = styled.div`
-    height: 0;    
+const StyledDiv = styled.div`
+    height: 0;
+`
+
+const StyledImg = styled.img`
+    height: 0;
+    width: 0;
 `
 
 export const ImageLoader = () => {
   return (
-    <HiddenDiv>
-      <img src={bears} alt={"bears"}/>
-      <img src={cove} alt={"cove"}/>
-      <img src={elk} alt={"elk"}/>
-      <img src={mill} alt={"mill"}/>
-      <img src={waterfall} alt={"waterfall"}/>
-    </HiddenDiv>
+    <StyledDiv>
+      <StyledImg src={bears} alt={"bears"}/>
+      <StyledImg src={cove} alt={"cove"}/>
+      <StyledImg src={elk} alt={"elk"}/>
+      <StyledImg src={mill} alt={"mill"}/>
+      <StyledImg src={waterfall} alt={"waterfall"}/>
+    </StyledDiv>
   )
 }
 

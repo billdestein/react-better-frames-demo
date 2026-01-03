@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const FrameBody = styled.div`
     align-items: center;
-    background-color: #004526;
+    background-color: #023E8A;
     color: white;
     display: flex;
     font-size: 1.1em;

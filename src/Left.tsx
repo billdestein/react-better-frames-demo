@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import './MarkdownStyles.css';
 
 const LeftNav = styled.div`
-    background-color: midnightblue;
+    background-color: #023E8A;
     color: white;
     height: 100%;
 `
