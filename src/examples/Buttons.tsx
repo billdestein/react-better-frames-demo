@@ -4,7 +4,7 @@ import { Button, Canvas, Frame, FrameProps } from '@billdestein/react-better-fra
 import bears from './images/bears.jpg'
 import cove from './images/cove.jpg'
 import elk from './images/elk.jpg'
-import mill from './images/mill.jpg'
+import flower from './images/flower.jpg'
 import waterfall from './images/waterfall.jpg'
 
 const ImgStyle= {
@@ -17,7 +17,7 @@ const images = [
   bears,
   cove,
   elk,
-  mill,
+  flower,
   waterfall
 ]
 
