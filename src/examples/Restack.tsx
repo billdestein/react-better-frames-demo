@@ -76,7 +76,7 @@ export const Restack = () => {
 export const RestackMarkdown = () => {
   return (
     <div>
-      <h2>Restsck</h2>
+      <h2>Restack</h2>
       <p>All frames are restackable.</p>
       <p>Clicking on a frame causes that frame to move to the front of the stack.</p>
     </div>

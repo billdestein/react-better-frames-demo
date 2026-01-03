@@ -2,18 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 import './MarkdownStyles.css';
 
-const LeftNav = styled.div`
-    background-color: #023E8A;
+const Column = styled.div`
+    background-color: midnightblue;
+    border-right: 1px solid white;
     color: white;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
 `
+
+const Top = styled.div`
+`;
+
+const Bottom = styled.div`
+    display: flex;
+    flex-grow: 1;
+`;
 
 const Option = styled.div`
     border-bottom: 1px solid white;
     color: white;
-    padding-left: 5px;
-    padding-right: 5px;
     padding: 5px 10px 5px 10px;
+    white-space: nowrap;
     &:hover {
         background-color: royalblue;
         cursor: pointer;
@@ -32,7 +41,7 @@ interface Props {
   exampleSelected: (exampleName: string) => void
 }
 
-export const Left = (props: Props) => {
+export const Picker = (props: Props) => {
   const { exampleSelected } = props
 
   const renderOption = (exampleName: string) => {
@@ -44,8 +53,11 @@ export const Left = (props: Props) => {
   }
 
   return (
-    <LeftNav>
-      { exampleNames.map(e => renderOption(e))}
-    </LeftNav>
+    <Column>
+      <Top>
+        { exampleNames.map(e => renderOption(e))}
+      </Top>
+      <Bottom/>
+    </Column>
   )
 }
