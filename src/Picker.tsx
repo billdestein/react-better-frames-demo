@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import './MarkdownStyles.css';
 
 const Column = styled.div`
-    background-color: midnightblue;
-    border-right: 1px solid white;
     color: white;
     display: flex;
     flex-direction: column;
@@ -24,7 +22,7 @@ const Option = styled.div`
     padding: 5px 15px 5px 15px;
     white-space: nowrap;
     &:hover {
-        background-color: royalblue;
+        background-color: #555555;
         cursor: pointer;
     }
 `

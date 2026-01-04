@@ -21,7 +21,7 @@ const images = [
   waterfall
 ]
 
-const ImageFrame= (frameProps: FrameProps) => {
+const Applet= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
   const [ imageNumber, setImageNumber ] = useState<number>(3)
 
@@ -69,7 +69,7 @@ const ImageFrame= (frameProps: FrameProps) => {
 
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(ImageFrame, {})
+  canvas.addComponent(Applet, {})
 }
 
 export const Buttons = () => {
@@ -90,6 +90,7 @@ export const ButtonsMarkdown = () => {
     <div>
       <h2 style={{marginTop: '5px'}}>Buttons</h2>
       <p>The frame header can contain a variable number of configurable buttons.  Each button has an icon, an onclick callback, and a tool tip.</p>
+      <p>Try clicking the next and previous buttons on the example rame here.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

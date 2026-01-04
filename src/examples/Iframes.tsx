@@ -12,7 +12,7 @@ const StyledIframe  = styled.iframe`
       width: 640px;
 `
 
-const WebPageIframe= (frameProps: FrameProps) => {
+const Applet= (frameProps: FrameProps) => {
   const { canvas, geometry, message } = frameProps
   const { title, url } = message
   const id = `iframe-${canvas.getNextKey()}`
@@ -54,7 +54,7 @@ const app = (canvas: Canvas) => {
     width: 680,
   }
 
-  canvas.addComponent(WebPageIframe, message)
+  canvas.addComponent(Applet, message)
 
   message = {
     height: 400,
@@ -63,7 +63,7 @@ const app = (canvas: Canvas) => {
     width: 680,
   }
 
-  canvas.addComponent(WebPageIframe, message)
+  canvas.addComponent(Applet, message)
 }
 
 export const Iframes = () => {
@@ -85,6 +85,7 @@ export const IframesMarkdown = () => {
       <h2 style={{marginTop: '5px'}}>Iframes</h2>
       <p>Frames can contain iframes.</p>
       <p>Note that iframes are unlike images in that they do not automatically resize when the containing div is resized.  Instead, resizing is an application concern.  The example code shows one way to handle this.</p>
+      <p>These are some really high-quality productions.  I hope you enjoy them as much as I have.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

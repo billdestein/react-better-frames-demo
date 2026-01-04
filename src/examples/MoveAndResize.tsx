@@ -12,7 +12,7 @@ const FrameBody = styled.div`
     justify-content: center;
 `
 
-const Component = (frameProps: FrameProps) => {
+const Applet = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -29,7 +29,7 @@ const Component = (frameProps: FrameProps) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(Component, {})
+  canvas.addComponent(Applet, {})
 }
 
 export const MoveAndResize = () => {
@@ -52,6 +52,7 @@ export const MoveAndResizeMarkdown = () => {
       <p>All frames can be moved and resized</p>
       <p>To move a frame, click and hold the frame header, and then move your mouse.</p>
       <p>To resize a frame, click and hold a side of the frame or a corner of the frame.  Then move your mouse.</p>
+      <p>Try moving and resizing the example frame here.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

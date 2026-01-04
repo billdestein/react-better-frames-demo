@@ -23,7 +23,7 @@ const NearFrameBody = styled.div`
     justify-content: center;
 `
 
-const Far = (frameProps: FrameProps) => {
+const FarApplet = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -39,7 +39,7 @@ const Far = (frameProps: FrameProps) => {
   )
 }
 
-const Near = (frameProps: FrameProps) => {
+const NearApplet = (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -56,8 +56,8 @@ const Near = (frameProps: FrameProps) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(Far, {})
-  canvas.addComponent(Near, {})
+  canvas.addComponent(FarApplet, {})
+  canvas.addComponent(NearApplet, {})
 }
 
 export const Restack = () => {
@@ -80,6 +80,7 @@ export const RestackMarkdown = () => {
       <h2 style={{marginTop: '5px'}}>Restack</h2>
       <p>All frames are restackable.</p>
       <p>Clicking on a frame causes that frame to move to the front of the stack.</p>
+      <p>Click on the 'Far' frame here and see it move to the front of the stack.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

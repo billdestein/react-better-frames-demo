@@ -10,7 +10,7 @@ const ImgStyle= {
   objectFit: 'cover',
 }
 
-const BearsFrame= (frameProps: FrameProps) => {
+const BearsApplet= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -26,7 +26,7 @@ const BearsFrame= (frameProps: FrameProps) => {
   )
 }
 
-const CoveFrame= (frameProps: FrameProps) => {
+const CoveApplet= (frameProps: FrameProps) => {
   const { canvas, geometry } = frameProps
 
   return (
@@ -43,8 +43,8 @@ const CoveFrame= (frameProps: FrameProps) => {
 }
 
 const app = (canvas: Canvas) => {
-  canvas.addComponent(BearsFrame, {})
-  canvas.addComponent(CoveFrame, {} )
+  canvas.addComponent(BearsApplet, {})
+  canvas.addComponent(CoveApplet, {} )
 }
 
 export const Images = () => {
@@ -66,6 +66,7 @@ export const ImagesMarkdown = () => {
       <h2 style={{marginTop: '5px'}}>Images</h2>
       <p>Frames can contain images.</p>
       <p>You'll see in the source code that the objectFit property on the img tag is set to 'cover'.  This way, the image is automatically resized when the frame is resized. The aspect ratio of the image is preserved, and fit is achieved through clipping.</p>
+      <p>Try resizing and restacking the images here.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )
