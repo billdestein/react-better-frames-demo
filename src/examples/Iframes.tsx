@@ -48,19 +48,19 @@ const WebPageIframe= (frameProps: FrameProps) => {
 const app = (canvas: Canvas) => {
 
   let message = {
-    height: 360,
+    height: 400,
     title: 'Born to Skate',
     url: 'https://player.vimeo.com/video/28693946?h=c343f615f6&color=ff9933&title=0&byline=0&portrait=0',
-    width: 640,
+    width: 680,
   }
 
   canvas.addComponent(WebPageIframe, message)
 
   message = {
-    height: 360,
+    height: 400,
     title: 'BACKFLIP',
     url: 'https://player.vimeo.com/video/868805980?h=9eac7a10c9',
-    width: 640,
+    width: 680,
   }
 
   canvas.addComponent(WebPageIframe, message)
