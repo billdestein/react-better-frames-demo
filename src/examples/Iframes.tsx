@@ -31,31 +31,6 @@ const WebPageIframe= (frameProps: FrameProps) => {
     element.style.transform = `scale(${scale})`;
   }
 
-  // const resize = (frameGeometry: Geometry) => {
-  //   const frameWidth = frameGeometry.width
-  //   const frameHeight = frameGeometry.height
-  //   const iframeWidth: number = message.width
-  //   const iframeHeight: number = message.height
-  //
-  //   console.log(`frameWidth: ${frameWidth}, frameHeight: ${frameHeight}, iframeWidth: ${iframeWidth}, iframeHeight: ${iframeHeight}`)
-  //
-  //   const width = frameHeight * (iframeWidth / iframeHeight)
-  //   const height: number = frameWidth * (iframeHeight / iframeWidth)
-  //
-  //   let scale
-  //
-  //   if (width / frameWidth > height / frameHeight ) {
-  //     scale = width / frameWidth
-  //   } else {
-  //     scale = height / frameHeight
-  //   }
-  //
-  //   console.log(`scale: ${scale}`)
-  //
-  //   const element = document.getElementById(id) as HTMLElement
-  //   element.style.transform = `scale(${scale})`;
-  // }
-
   return (
     <Frame
       buttons={[]}
