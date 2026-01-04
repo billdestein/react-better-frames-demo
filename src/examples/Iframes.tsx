@@ -1,5 +1,5 @@
 import React from 'react'
-import { Canvas, Frame, FrameProps } from '@billdestein/react-better-frames'
+import { Canvas, Frame, FrameProps, Geometry } from '@billdestein/react-better-frames'
 import styled from 'styled-components'
 
 const StyledIframe  = styled.iframe`
@@ -15,9 +15,46 @@ const StyledIframe  = styled.iframe`
 const WebPageIframe= (frameProps: FrameProps) => {
   const { canvas, geometry, message } = frameProps
   const { title, url } = message
+  const id = `iframe-${canvas.getNextKey()}`
 
-  geometry.height = 360
-  geometry.width = 640
+  const resize = (frameGeometry: Geometry) => {
+    const frameWidth = frameGeometry.width
+    const iframeWidth: number = message.width
+    const scaleWidth = frameWidth / iframeWidth
+
+    const frameHeight = frameGeometry.height
+    const iframeHeight: number = message.height
+    const scaleHeight = frameHeight / iframeHeight
+
+    const scale = scaleWidth > scaleHeight ? scaleWidth : scaleHeight
+    const element = document.getElementById(id) as HTMLElement
+    element.style.transform = `scale(${scale})`;
+  }
+
+  // const resize = (frameGeometry: Geometry) => {
+  //   const frameWidth = frameGeometry.width
+  //   const frameHeight = frameGeometry.height
+  //   const iframeWidth: number = message.width
+  //   const iframeHeight: number = message.height
+  //
+  //   console.log(`frameWidth: ${frameWidth}, frameHeight: ${frameHeight}, iframeWidth: ${iframeWidth}, iframeHeight: ${iframeHeight}`)
+  //
+  //   const width = frameHeight * (iframeWidth / iframeHeight)
+  //   const height: number = frameWidth * (iframeHeight / iframeWidth)
+  //
+  //   let scale
+  //
+  //   if (width / frameWidth > height / frameHeight ) {
+  //     scale = width / frameWidth
+  //   } else {
+  //     scale = height / frameHeight
+  //   }
+  //
+  //   console.log(`scale: ${scale}`)
+  //
+  //   const element = document.getElementById(id) as HTMLElement
+  //   element.style.transform = `scale(${scale})`;
+  // }
 
   return (
     <Frame
@@ -25,10 +62,10 @@ const WebPageIframe= (frameProps: FrameProps) => {
       canvas={canvas as Canvas}
       geometry={geometry}
       isIframe
-      onResize={() => {}}
+      onResize={resize}
       title={title}
     >
-      <StyledIframe src={url} title={""}/>
+      <StyledIframe id={id} src={url} title={""}/>
     </Frame>
   )
 }
