@@ -65,7 +65,7 @@ export const ImagesMarkdown = () => {
     <div>
       <h2 style={{marginTop: '5px'}}>Images</h2>
       <p>Frames can contain images.</p>
-      <p>When the frame is resized, the image is automatically resized as well.  The aspect ration of the image is preserved, and fit is achieved through clipping.</p>
+      <p>You'll see in the source code that the objectFit property on the img tag is set to 'cover'.  This way, the image is automatically resized when the frame is resized. The aspect ratio of the image is preserved, and fit is achieved through clipping.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

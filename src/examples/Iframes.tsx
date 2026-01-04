@@ -72,9 +72,7 @@ export const IframesMarkdown = () => {
     <div>
       <h2 style={{marginTop: '5px'}}>Iframes</h2>
       <p>Frames can contain iframes.</p>
-      <p>The handling of iframes is tricky for two reasons.</p>
-      <p>The first concern is restacking.  When a user clicks on an iframe, the click event is sent to the child DOM and is handled there.  For security reasons, a browser will not propagate the click event from the child dom to the parent DOM.  So the parent DOM is unaware that the click happened, and does not know to restack.</p>
-      <p>The approach taken by react-better-frames is this.  For the iframe on the top of the stack, clicks are reported to the child DOM and are handled there.  For iframes that are not at the top of the stack, the parent DOM positions a clear rectangle over the iframe.  Clicks are reported to the parent DOM, and the parent DOM restacks the iframes.  After restacking, clear rectangles are positioned over all but the top-of-stack frame.</p>
+      <p>Note that iframes are unlike images in that they do not automatically resize when the containing div is resized.  Instead, resizing is an application concern.  The example code shows one way to handle this.</p>
       <a style={{color: 'lightblue'}} href={code} target="_blank" rel="noreferrer">Source Code</a>
     </div>
   )

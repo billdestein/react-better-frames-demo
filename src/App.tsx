@@ -7,6 +7,7 @@ import {Images, ImagesMarkdown} from "./examples/Images";
 import { Picker } from './Picker'
 import {MoveAndResize, MoveAndResizeMarkdown} from "./examples/MoveAndResize";
 import {Restack, RestackMarkdown} from "./examples/Restack";
+import slate from './examples/images/slate.png'
 import styled from 'styled-components'
 
 const Row = styled.div`
@@ -20,7 +21,7 @@ const Left = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
 `
 
 const LeftTop = styled.div`
@@ -28,9 +29,12 @@ const LeftTop = styled.div`
     font-size: 2.0em;
     color: white;
     padding-bottom: 15px;
+    padding-left: 15px;
     padding-top: 15px;
-    text-align: center;
 `
+
+// text-align: center;
+
 
 const LeftBottom = styled.div`
     display: flex;
@@ -47,7 +51,9 @@ const Documentation = styled.div`
 `
 
 const Right = styled.div`
-    background-color: #CCCCCC;
+    background-image: url(${slate});
+    background-size: cover;
+    background-position:  center;
     flex-grow: 1;
 `
 
