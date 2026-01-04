@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/react-better-frames-demo/static/css/main.e48b82a5.css",
-    "main.js": "/react-better-frames-demo/static/js/main.0b75dc2e.js",
+    "main.js": "/react-better-frames-demo/static/js/main.9876a01d.js",
     "static/js/453.b26bb597.chunk.js": "/react-better-frames-demo/static/js/453.b26bb597.chunk.js",
     "static/media/waterfall.jpg": "/react-better-frames-demo/static/media/waterfall.32cef1f08f9b76cd6c07.jpg",
     "static/media/cove.jpg": "/react-better-frames-demo/static/media/cove.ca04913c2c2fa3e82d87.jpg",
     "static/media/elk.jpg": "/react-better-frames-demo/static/media/elk.746e0daa34b0e1bef5ea.jpg",
     "static/media/flower.jpg": "/react-better-frames-demo/static/media/flower.fbe0927f8d6ae2629756.jpg",
     "static/media/bears.jpg": "/react-better-frames-demo/static/media/bears.dd25539a43c6c6771d00.jpg",
+    "static/media/slate.png": "/react-better-frames-demo/static/media/slate.f18fedf46ec87432814c.png",
     "index.html": "/react-better-frames-demo/index.html",
     "main.e48b82a5.css.map": "/react-better-frames-demo/static/css/main.e48b82a5.css.map",
-    "main.0b75dc2e.js.map": "/react-better-frames-demo/static/js/main.0b75dc2e.js.map",
+    "main.9876a01d.js.map": "/react-better-frames-demo/static/js/main.9876a01d.js.map",
     "453.b26bb597.chunk.js.map": "/react-better-frames-demo/static/js/453.b26bb597.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e48b82a5.css",
-    "static/js/main.0b75dc2e.js"
+    "static/js/main.9876a01d.js"
   ]
 }
